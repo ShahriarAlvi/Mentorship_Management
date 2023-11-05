@@ -1,6 +1,6 @@
-import './Home.css';
+import './Main.css';
 
-export const Home = () => {
+export const Main = () => {
     return (
         <div className="hero">
           <div className="hero-text">
