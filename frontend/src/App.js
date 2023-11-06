@@ -8,6 +8,7 @@ import { Signup } from './pages/Signup';
 import { Navbar } from './pages/Navbar';
 import {Welcome } from './pages/Welcome';
 import {Profile } from './pages/Profile';
+import {Mentor } from './pages/Mentor';
 
 function App() {
   const [user, setUser] = useState({});
@@ -24,6 +25,7 @@ function App() {
           <Route path='/signup' element={<Signup />}/>
           <Route path='/welcome/:email' element={<Welcome />} />
           <Route path='/profile' element={<Profile />}/>
+          <Route path="/mentors" element={<Mentor />} />
         </Routes>
       </Router>
       </UserContext.Provider>

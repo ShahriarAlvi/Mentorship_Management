@@ -14,6 +14,7 @@ export const Navbar = () => {
           </div>
           <div className='links'>
             <Link className="link" to="/welcome/:email">Home</Link>
+            <Link className="link" to="/mentors">Mentors</Link>
             <Link className="link" to="/login">Login</Link>
             <Link className="link" to="/signup">SignUp</Link>
             <Link className="imgProfileLink" to="/profile">
