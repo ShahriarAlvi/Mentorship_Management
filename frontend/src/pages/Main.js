@@ -1,4 +1,6 @@
 import './Main.css';
+import ChatApp from '../Components/ChatBox/ChatApp';
+import Sidebar from '../Components/Sidebar/Sidebar'
 
 export const Main = () => {
     return (
@@ -28,6 +30,16 @@ export const Main = () => {
             </select>
             <button>Search</button>
           </div>
+
+          <div> <ChatApp />
+
+          </div>
+
+          <div> 
+            <Sidebar />
+          </div>
+
+          
         </div>
       
     )

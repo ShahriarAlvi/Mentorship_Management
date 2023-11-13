@@ -9,6 +9,7 @@ import { Navbar } from './pages/Navbar';
 import {Welcome } from './pages/Welcome';
 import {Profile } from './pages/Profile';
 import {Mentor } from './pages/Mentor';
+import {LoggedNavbar } from './Components/LoggedNavbar/LoggedNavbar.js';
 
 function App() {
   const [user, setUser] = useState({});
@@ -18,7 +19,7 @@ function App() {
     <div className="App">
       <UserContext.Provider value={{ user, setUser }}>
       <Router>
-        <Navbar />
+        <LoggedNavbar />
         <Routes>
           <Route path='/' element={<Main />}/>
           <Route path='/login' element={<Login />}/>

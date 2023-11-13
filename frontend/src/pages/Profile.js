@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import './Profile.css';
+import "./Profile.css";
 import BasicInfoForm from "../Components/BasicInfoForm";
 import ExperienceForm from "../Components/ExperienceForm";
 import SocialForm from "../Components/SocialForm";
-import Coverimg from "../images/coverphoto.jpg"
-import Profileimg from "../images/profile.jpeg"
+import Coverimg from "../images/coverphoto.jpg";
+import Profileimg from "../images/profile.jpeg";
+import ProfilePage from "../Components/ProfilePage-gpt/ProfilePage"
+import ChatApp from "../Components/ChatBox/ChatApp";
 export const Profile = () => {
-
   const [showForm, setShowForm] = useState(false);
-  const [activeTab, setActiveTab] = useState('basic');
+  const [activeTab, setActiveTab] = useState("basic");
 
   const handleClick = () => {
     setShowForm(!showForm);
@@ -22,7 +23,7 @@ export const Profile = () => {
     setActiveTab(tab);
   };
 
-    return (
+  return (
     <div className="profile">
       <div className="profile-container">
         <div className="images">
@@ -43,31 +44,31 @@ export const Profile = () => {
           <div className="form-box">
             <div className="tabs">
               <button
-                className={activeTab === 'basic' ? 'active' : ''}
-                onClick={() => handleTabChange('basic')}
+                className={activeTab === "basic" ? "active" : ""}
+                onClick={() => handleTabChange("basic")}
               >
                 Basic Info
               </button>
               <button
-                className={activeTab === 'experience' ? 'active' : ''}
-                onClick={() => handleTabChange('experience')}
+                className={activeTab === "experience" ? "active" : ""}
+                onClick={() => handleTabChange("experience")}
               >
                 Experience
               </button>
               <button
-                className={activeTab === 'social' ? 'active' : ''}
-                onClick={() => handleTabChange('social')}
+                className={activeTab === "social" ? "active" : ""}
+                onClick={() => handleTabChange("social")}
               >
                 Social Links
               </button>
             </div>
 
             {/* Render different form content based on the active tab */}
-            {activeTab === 'basic' && <BasicInfoForm />}
+            {activeTab === "basic" && <BasicInfoForm />}
 
-            {activeTab === 'experience' && <ExperienceForm />}
+            {activeTab === "experience" && <ExperienceForm />}
 
-            {activeTab === 'social' && <SocialForm />}
+            {activeTab === "social" && <SocialForm />}
             <button className="close-button" onClick={handleClose}>
               Close
             </button>
@@ -82,6 +83,11 @@ export const Profile = () => {
         </div>
         <div className="Skill-set"></div>
       </div>
+
+      <div>
+        <ProfilePage />
+      </div>
     </div>
+    
   );
-}
+};
