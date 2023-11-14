@@ -6,6 +6,7 @@ import SocialForm from "../Components/SocialForm";
 import Coverimg from "../images/coverphoto.jpg";
 import Profileimg from "../images/profile.jpeg";
 import ProfilePage from "../Components/ProfilePage-gpt/ProfilePage"
+import ProfilePage2 from '../Components/Profile/Profile.jsx'
 import ChatApp from "../Components/ChatBox/ChatApp";
 export const Profile = () => {
   const [showForm, setShowForm] = useState(false);
@@ -25,7 +26,7 @@ export const Profile = () => {
 
   return (
     <div className="profile">
-      <div className="profile-container">
+       <div className="profile-container">
         <div className="images">
           <img className="cover" src={Coverimg} alt="cover" />
           <img className="profilepic" src={Profileimg} alt="profilepic" />
@@ -86,7 +87,9 @@ export const Profile = () => {
 
       <div>
         <ProfilePage />
-      </div>
+      </div> 
+
+      <div><ProfilePage2 /></div>
     </div>
     
   );
